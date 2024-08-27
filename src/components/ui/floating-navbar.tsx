@@ -9,6 +9,14 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { RxHamburgerMenu } from "react-icons/rx";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./dropdown-menu";
 
 export const FloatingNav = ({
   navItems,
@@ -24,6 +32,7 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
+  const [showItems, setShowItems] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -34,11 +43,13 @@ export const FloatingNav = ({
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
+        setShowItems(false);
       } else {
         if (direction < 0) {
           setVisible(true);
         } else {
           setVisible(false);
+          setShowItems(false);
         }
       }
     }
@@ -64,7 +75,7 @@ export const FloatingNav = ({
         )}
       >
         <Image src={"/next.svg"} width={100} height={100} alt="logo" />
-        <div className="flex gap-6 text-[16px]">
+        <div className="hidden md:flex gap-6 text-[16px]">
           {navItems.map((navItem: any, idx: number) => (
             <Link
               key={`link=${idx}`}
@@ -80,7 +91,7 @@ export const FloatingNav = ({
             </Link>
           ))}
         </div>
-        <div className="flex gap-2 text-[16px]">
+        <div className="hidden md:flex gap-2 text-[16px]">
           <button className="border font-medium relative border-primary dark:border-white/[0.2] text-secondary-foreground dark:text-white px-4 py-2 rounded-[8px] bg-secondary text-[16px]">
             <span>Log in</span>
           </button>
@@ -88,6 +99,31 @@ export const FloatingNav = ({
             <span>Sign in</span>
           </button>
         </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <RxHamburgerMenu className="md:hidden w-6 h-6" />
+          </DropdownMenuTrigger>
+
+          <DropdownMenuContent className="mt-12">
+            <DropdownMenuGroup>
+              {navItems.map((navItem: any, idx: number) => (
+                <DropdownMenuItem key={idx}>
+                  <Link
+                    key={`link=${idx}`}
+                    href={navItem.link}
+                    className={cn(
+                      "relative dark:text-neutral-50 items-center flex gap-1 space-x-1 text-black dark:hover:text-neutral-300 hover:text-neutral-500 text-[16px]"
+                    )}
+                  >
+                    <span className="text-[16px] font-medium">
+                      {navItem.name}
+                    </span>
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuGroup>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </motion.div>
     </AnimatePresence>
   );
