@@ -75,7 +75,7 @@ export const FloatingNav = ({
         )}
       >
         <Image src={"/next.svg"} width={100} height={100} alt="logo" />
-        <div className="hidden md:flex gap-6 text-[16px]">
+        <div className="hidden lg:flex gap-6 text-[16px]">
           {navItems.map((navItem: any, idx: number) => (
             <Link
               key={`link=${idx}`}
@@ -91,7 +91,7 @@ export const FloatingNav = ({
             </Link>
           ))}
         </div>
-        <div className="hidden md:flex gap-2 text-[16px]">
+        <div className="hidden lg:flex gap-2 text-[16px]">
           <button className="border font-medium relative border-primary dark:border-white/[0.2] text-secondary-foreground dark:text-white px-4 py-2 rounded-[8px] bg-secondary text-[16px]">
             <span>Log in</span>
           </button>
@@ -101,7 +101,7 @@ export const FloatingNav = ({
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <RxHamburgerMenu className="md:hidden w-6 h-6" />
+            <RxHamburgerMenu className="lg:hidden w-6 h-6" />
           </DropdownMenuTrigger>
 
           <DropdownMenuContent className="mt-12">
@@ -121,6 +121,26 @@ export const FloatingNav = ({
                   </Link>
                 </DropdownMenuItem>
               ))}
+              <DropdownMenuItem>
+                <Link
+                  href={"/"}
+                  className={cn(
+                    "relative dark:text-neutral-50 items-center flex gap-1 space-x-1 text-black dark:hover:text-neutral-300 hover:text-neutral-500 text-[16px]"
+                  )}
+                >
+                  <span className="text-[16px] font-medium">Log in</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  href={"/"}
+                  className={cn(
+                    "relative dark:text-neutral-50 items-center flex gap-1 space-x-1 text-black dark:hover:text-neutral-300 hover:text-neutral-500 text-[16px]"
+                  )}
+                >
+                  <span className="text-[16px] font-medium">Sign in</span>
+                </Link>
+              </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>
