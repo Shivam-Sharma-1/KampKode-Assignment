@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import OrbitingCircles from "./magicui/orbiting-circles";
 import { IoMdArrowForward } from "react-icons/io";
@@ -6,12 +8,12 @@ import Image from "next/image";
 function HeroSection() {
   return (
     <section>
-      <div className="relative flex h-full min-h-dvh w-full flex-col items-center justify-center overflow-hidden bg-background">
-        <div className="pointer-events-none text-center leading-none text-black z-[10] dark:from-white dark:to-black flex flex-col items-center gap-6">
-          <h1 className="text-[60px] font-semibold ">
+      <div className="relative flex h-full py-20 md:p-0 min-h-dvh w-full flex-col items-center justify-center overflow-hidden bg-background">
+        <div className="pointer-events-none text-center leading-none text-black z-[10] dark:from-white dark:to-black flex flex-col items-center gap-6 w-full px-4">
+          <h1 className="sm:text-[60px] text-[50px] font-semibold w-full">
             We&apos;ve really sped up our workflow
           </h1>
-          <div className="text-lg w-[800px] text-center text-gray-600 flex flex-col gap-2">
+          <div className="text-lg w-full max-w-[800px] text-center text-gray-600 flex flex-col gap-2">
             <p>
               <span className="font-medium">
                 We&apos;ve just released a new update!{" "}
@@ -21,12 +23,12 @@ function HeroSection() {
             </p>
             <p> Join 4,000+ companies already growing</p>
           </div>
-          <div className="flex items-center gap-6 mt-4">
-            <button className="h-12 items-center justify-center rounded-[8px] border border-slate-200 bg-white px-6 font-medium text-slate-700 cursor-pointer z-[10] flex gap-2">
+          <div className="flex flex-col xs:flex-row items-center gap-2 xs:gap-6 mt-4">
+            <button className="h-12 items-center justify-center rounded-[8px] border border-slate-200 bg-white px-6 font-medium text-slate-700 cursor-pointer z-[10] flex gap-2 xs:w-fit w-full">
               <IoMdArrowForward className="w-5 h-5" />
               Start Learning Today
             </button>
-            <button className="h-12 items-center justify-center rounded-[8px] border border-slate-200 bg-primary px-6 font-medium text-white cursor-pointer z-[10] flex gap-2">
+            <button className="h-12 items-center justify-center rounded-[8px] border border-slate-200 bg-primary px-6 font-medium text-white cursor-pointer z-[10] flex gap-2 xs:w-fit w-full">
               Join Now
             </button>
           </div>
