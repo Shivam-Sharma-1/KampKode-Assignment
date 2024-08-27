@@ -4,6 +4,10 @@
 
 This project is a responsive landing page developed as part of the assignment for the KampKode internship application process. The webpage is built using Next.js, following a pixel-perfect design based on provided Figma files, and it incorporates Magic UI and Accernity UI components. The goal was to create a modern, responsive, and accessible landing page using industry-standard tools and best practices.
 
+## Video
+
+https://github.com/user-attachments/assets/b3ee9ec3-b95f-42d4-9619-464e4a3b7c38
+
 ## Tech Stack
 
 - **Next.js**: A React framework for server-rendered or statically-exported React applications.
