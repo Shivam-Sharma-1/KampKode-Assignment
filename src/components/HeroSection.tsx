@@ -42,12 +42,12 @@ function HeroSection() {
             </p>
             <p> Join 4,000+ companies already growing</p>
           </div>
-          <div className="flex flex-col-reverse xs:flex-row items-center gap-2 xs:gap-6 mt-4">
-            <button className="h-12 items-center justify-center rounded-[8px] border border-slate-200 bg-white px-6 font-medium text-slate-700 cursor-pointer z-[10] flex gap-2 xs:w-fit w-full">
+          <div className="flex flex-col-reverse sm:flex-row items-center gap-2 sm:gap-6 mt-4">
+            <button className="h-12 items-center justify-center rounded-[8px] border border-slate-200 bg-white px-6 font-medium text-slate-700 cursor-pointer z-[10] flex gap-2 sm:w-fit w-full">
               <IoMdArrowForward className="w-5 h-5" />
               Start Learning Today
             </button>
-            <button className="h-12 items-center justify-center rounded-[8px] border border-slate-200 bg-primary px-6 font-medium text-white cursor-pointer z-[10] flex gap-2 xs:w-fit w-full">
+            <button className="h-12 items-center justify-center rounded-[8px] border border-slate-200 bg-primary px-6 font-medium text-white cursor-pointer z-[10] flex gap-2 sm:w-fit w-full">
               Join Now
             </button>
           </div>
