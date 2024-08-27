@@ -4,6 +4,8 @@
 
 This project is a responsive landing page developed as part of the assignment for the KampKode internship application process. The webpage is built using Next.js, following a pixel-perfect design based on provided Figma files, and it incorporates Magic UI and Accernity UI components. The goal was to create a modern, responsive, and accessible landing page using industry-standard tools and best practices.
 
+Deployed Link: https://kamp-kode-assignment.vercel.app/
+
 ## Video
 
 https://github.com/user-attachments/assets/07f61993-c0b7-42d2-9449-fda7b1b2bcf5
