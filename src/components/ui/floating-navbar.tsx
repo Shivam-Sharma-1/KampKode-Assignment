@@ -97,7 +97,7 @@ export const FloatingNav = ({
           </button>
         </div>
         <DropdownMenu>
-          <DropdownMenuTrigger>
+          <DropdownMenuTrigger className="lg:hidden">
             <RxHamburgerMenu className="lg:hidden w-6 h-6" />
           </DropdownMenuTrigger>
 
