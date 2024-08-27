@@ -6,7 +6,7 @@ This project is a responsive landing page developed as part of the assignment fo
 
 ## Video
 
-https://github.com/user-attachments/assets/b3ee9ec3-b95f-42d4-9619-464e4a3b7c38
+https://github.com/user-attachments/assets/07f61993-c0b7-42d2-9449-fda7b1b2bcf5
 
 ## Tech Stack
 
