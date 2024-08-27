@@ -32,7 +32,6 @@ export const FloatingNav = ({
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
-  const [showItems, setShowItems] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -43,13 +42,11 @@ export const FloatingNav = ({
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
-        setShowItems(false);
       } else {
         if (direction < 0) {
           setVisible(true);
         } else {
           setVisible(false);
-          setShowItems(false);
         }
       }
     }
@@ -70,11 +67,11 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-[90%] h-[80px] mx-auto fixed top-8 inset-x-0 border border-transparent dark:border-white/[0.2] rounded-[20px] dark:bg-black bg-white shadow-shadow z-[5000] px-8 py-2 items-center space-x-4 justify-between text-[16px]",
+          "flex max-w-[90%] h-[60px] md:h-[80px] mx-auto fixed top-8 inset-x-0 border border-transparent dark:border-white/[0.2] rounded-[20px] dark:bg-black bg-white shadow-shadow z-[5000] px-8 py-2 items-center space-x-4 justify-between text-[16px]",
           className
         )}
       >
-        <Image src={"/next.svg"} width={100} height={100} alt="logo" />
+        <Image src={"/NAVBAR.svg"} width={100} height={100} alt="logo" />
         <div className="hidden lg:flex gap-6 text-[16px]">
           {navItems.map((navItem: any, idx: number) => (
             <Link
@@ -104,7 +101,7 @@ export const FloatingNav = ({
             <RxHamburgerMenu className="lg:hidden w-6 h-6" />
           </DropdownMenuTrigger>
 
-          <DropdownMenuContent className="mt-12">
+          <DropdownMenuContent className="mt-10">
             <DropdownMenuGroup>
               {navItems.map((navItem: any, idx: number) => (
                 <DropdownMenuItem key={idx}>
